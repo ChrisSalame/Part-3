@@ -9,6 +9,8 @@ public class Thief : Villager
     public Transform spawnPointTwo;
     public Transform dashLocal;
 
+
+
     public override ChestType CanOpen()
     {
         return ChestType.Thief;
@@ -23,6 +25,7 @@ public class Thief : Villager
         Instantiate(knifePrefab, spawnPointTwo.position, spawnPointTwo.rotation);
 
         transform.position = dashLocal.position;
+        destination = transform.position;
 
     }
 
