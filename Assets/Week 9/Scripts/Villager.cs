@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,12 +17,15 @@ public class Villager : MonoBehaviour
     Vector2 movement;
     float speed = 3;
 
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         destination = transform.position;
         Selected(false);
+       
     }
     public void Selected(bool value)
     {
