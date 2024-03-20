@@ -6,6 +6,10 @@ public class Archer : Villager
 {
     public GameObject arrowPrefab;
     public Transform spawnPoint;
+    public override string ToString()
+    {
+        return "This is Bob the Archer";
+    }
 
     protected override void Attack()
     {
