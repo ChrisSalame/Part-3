@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,9 +14,7 @@ public class Villager : MonoBehaviour
 
     protected Vector2 destination;
     Vector2 movement;
-    float speed = 3;
-
-
+    protected float speed = 3;
 
     void Start()
     {
@@ -25,7 +22,6 @@ public class Villager : MonoBehaviour
         animator = GetComponent<Animator>();
         destination = transform.position;
         Selected(false);
-       
     }
     public void Selected(bool value)
     {
@@ -62,6 +58,7 @@ public class Villager : MonoBehaviour
         if (movement.magnitude < 0.1)
         {
             movement = Vector2.zero;
+            speed = 3;
         }
 
         rb.MovePosition(rb.position + movement.normalized * speed * Time.deltaTime);
@@ -82,8 +79,6 @@ public class Villager : MonoBehaviour
         {
             Attack();
         }
-
-
     }
 
     protected virtual void Attack()
@@ -91,11 +86,8 @@ public class Villager : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
-    public virtual ChestType CanOpen() 
+    public virtual ChestType CanOpen()
     {
         return ChestType.Villager;
-
     }
-
-
 }
