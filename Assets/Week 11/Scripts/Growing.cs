@@ -17,18 +17,28 @@ public class Growing : MonoBehaviour
 
     void Start()
     {
-        Square();
-        Triangle();
-        Circle();
+        StartCoroutine(GrowShapes());
     }
 
     void Update()
     {
-        
+
+        crTMP.text = "Coroutines Running:" + running.ToString();
     }
 
-    void Square()
+    IEnumerator GrowShapes() 
     {
+        running += 1;
+        StartCoroutine(Square());
+        yield return new WaitForSeconds(1);
+        coroutine = StartCoroutine(Triangle());
+        StartCoroutine(Circle());
+        yield return coroutine;
+        running -= 1;
+    }
+    IEnumerator Square()
+    {
+        running += 1;
         float size = 0;
         while (size < 5)
         {
@@ -36,10 +46,13 @@ public class Growing : MonoBehaviour
             Vector3 scale = new Vector3(size, size, size);
             square.transform.localScale = scale;
             squareTMP.text = "Square: " + scale;
+            yield return null;
         }
+        running -= 1;
     }
-    void Triangle()
+    IEnumerator Triangle()
     {
+        running += 1;
         float size = 0;
         while (size < 5)
         {
@@ -47,25 +60,33 @@ public class Growing : MonoBehaviour
             Vector3 scale = new Vector3(size, size, size);
             triangle.transform.localScale = scale;
             triangleTMP.text = "Triangle: " + scale;
+            yield return null;
         }
+        running -= 1;
     }
-    void Circle()
+    IEnumerator Circle()
     {
 
         float size = 0;
+        running += 1;
         while (size < 5)
         {
             size += Time.deltaTime;
             Vector3 scale = new Vector3(size, size, size);
             circle.transform.localScale = scale;
             circleTMP.text = "Cirlce: " + scale;
+            yield return null;
         }
+        
         while (size > 0)
         {
             size -= Time.deltaTime;
             Vector3 scale = new Vector3(size, size, size);
             circle.transform.localScale = scale;
             circleTMP.text = "Cirlce: " + scale;
+            yield return null;
         }
+        running -= 1;
+
     }
 }
