@@ -730,7 +730,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142140346}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlightControl, Assembly-CSharp
         m_MethodName: MoveForwards
         m_Mode: 4
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142140346}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlightControl, Assembly-CSharp
         m_MethodName: MakeTurn
         m_Mode: 4
@@ -1306,7 +1306,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142140346}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlightControl, Assembly-CSharp
         m_MethodName: MakeTurn
         m_Mode: 4
@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142140346}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlightControl, Assembly-CSharp
         m_MethodName: MakeTurn
         m_Mode: 4
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2142140346}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FlightControl, Assembly-CSharp
         m_MethodName: MakeTurn
         m_Mode: 4
@@ -1941,6 +1941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142140345}
+  - component: {fileID: 2142140347}
   - component: {fileID: 2142140346}
   m_Layer: 0
   m_Name: Flight Control
@@ -1976,9 +1977,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d32c68c29c23f4fa00bd9ca8c1ffbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missile: {fileID: 8232337473878991417}
+  missile: {fileID: 0}
   speed: 5
   turningSpeedReduction: 0.75
+--- !u!114 &2142140347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142140343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e89f277c7ed097941a4301399a67a6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7264169009006815911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2036,11 +2049,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b2d74fb6d2bf547b216f4f64cd69fc, type: 3}
---- !u!1 &8232337473878991417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4985076926398969104, guid: 73b2d74fb6d2bf547b216f4f64cd69fc, type: 3}
-  m_PrefabInstance: {fileID: 7264169009006815911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
