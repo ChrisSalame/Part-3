@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class AquaticAnimal : MonoBehaviour
 {
     //This sets the speed
-    public float swimSpeed = 0.1f;
+    public float swimSpeed = 0.05f;
     Vector2 swimDirection;
 
     

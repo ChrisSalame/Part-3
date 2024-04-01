@@ -9,15 +9,15 @@ public class Fish : AquaticAnimal
 
     protected override void action()
     {
-        StartCoroutine(actionCoroutine());
-        swimSpeed = 0.3f;
-        Vector2 swimDirection = new Vector2(Random.Range(0f,3f), Random.Range(0f,3f));
+        pauseBeforeAction = StartCoroutine(actionCoroutine());
         
     }
 
     IEnumerator actionCoroutine()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
+        swimSpeed = 0.2f;
+        Vector2 swimDirection = new Vector2(Random.Range(0f, 3f), Random.Range(0f, 3f));
     }
 
 

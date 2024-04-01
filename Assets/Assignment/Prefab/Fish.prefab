@@ -161,4 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add39068c02c8f74a98881b2ed462c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimSpeed: 0.1
+  swimSpeed: 0.05
