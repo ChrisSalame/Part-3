@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class AquaticAnimal : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class AquaticAnimal : MonoBehaviour
     Vector2 swimDirection;
 
     Rigidbody2D animalRb;
+
     void Start()
     {
         //This makes it so that the animal doesn't go updward by setting y to 0, then the .x sets the swim direction to x
@@ -20,9 +22,12 @@ public class AquaticAnimal : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
-
+        if (Input.GetKeyDown("1"))
+        {
+            action();
+        }
     }
 
     private void FixedUpdate()
@@ -32,11 +37,11 @@ public class AquaticAnimal : MonoBehaviour
     }
 
 
+
     //This function is to have the animal perform an action when pressed on 
-    public static void action() 
+    protected virtual void action() 
     {
-
-
+        Debug.Log("Test action worked, fish should speed up");
     }
 
 

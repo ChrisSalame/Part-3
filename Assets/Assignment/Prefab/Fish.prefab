@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6326066115260059336}
+  - component: {fileID: -3801518833414510221}
   - component: {fileID: 4020938512224006454}
-  - component: {fileID: 7392835162226111036}
+  - component: {fileID: 1352220220293479613}
   m_Layer: 0
   m_Name: Fish
   m_TagString: Untagged
@@ -33,6 +34,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &-3801518833414510221
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837329256977056577}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!212 &4020938512224006454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85,7 +113,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7392835162226111036
+--- !u!114 &1352220220293479613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8837329256977056577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecce4a7a0989eaa4d98459f04c50c18d, type: 3}
+  m_Script: {fileID: 11500000, guid: add39068c02c8f74a98881b2ed462c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   swimSpeed: 0.1

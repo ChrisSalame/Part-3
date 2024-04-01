@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Fish : AquaticAnimal
 {
-    // Start is called before the first frame update
-    void Start()
+   
+
+    protected override void action()
     {
-        
+        swimSpeed = 0.3f;
+        Vector2 swimDirection = new Vector2(Random.Range(-2f,2f), Random.Range(2f,2f));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

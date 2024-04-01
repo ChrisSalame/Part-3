@@ -5,11 +5,7 @@ using UnityEngine;
 public class AquaticSpawner : MonoBehaviour
 {
     public GameObject[] creaturePrefab = new GameObject[3];
-    void Start()
-    {
-        
-    }
-
+    
     
     void Update()
     {
