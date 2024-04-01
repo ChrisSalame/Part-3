@@ -18,12 +18,18 @@ public class AquaticAnimal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
     {
         //This has the creature move in a set direction using speed
         transform.Translate(swimDirection.normalized * swimSpeed);
+    }
+
+    //This destroys the game object once its offscreen
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
