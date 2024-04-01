@@ -10,6 +10,7 @@ public class AquaticAnimal : MonoBehaviour
     public float swimSpeed = 0.1f;
     Vector2 swimDirection;
 
+    
     Rigidbody2D animalRb;
 
     void Start()
@@ -19,15 +20,13 @@ public class AquaticAnimal : MonoBehaviour
         swimDirection.x = 1;
 
         animalRb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (Input.GetKeyDown("1"))
-        {
-            action();
-        }
+
     }
 
     private void FixedUpdate()
@@ -41,7 +40,7 @@ public class AquaticAnimal : MonoBehaviour
     //This function is to have the animal perform an action when pressed on 
     protected virtual void action() 
     {
-        Debug.Log("Test action worked, fish should speed up");
+
     }
 
 
@@ -50,4 +49,6 @@ public class AquaticAnimal : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+
 }
