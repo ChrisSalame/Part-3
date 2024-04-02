@@ -9,7 +9,7 @@ public class AquaticAnimal : MonoBehaviour
     //This sets the speed
     public float swimSpeed = 0.05f;
     public Vector2 swimDirection;
-    public Vector2 inkDirection;
+    public Vector2 inkSpawnDirection;
     public GameObject ink;
 
 
@@ -27,8 +27,8 @@ public class AquaticAnimal : MonoBehaviour
     {
         //This has the creature move in a set direction using speed
         transform.Translate(swimDirection.normalized * swimSpeed);
-        inkDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        ink.transform.position = inkDirection;
+        inkSpawnDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        ink.transform.position = inkSpawnDirection;
 
     }
 
