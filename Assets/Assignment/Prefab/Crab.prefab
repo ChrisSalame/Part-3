@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4483127041825604253}
   - component: {fileID: 3390892995258977874}
-  - component: {fileID: 2401715699492329321}
+  - component: {fileID: -8159447011442885296}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Crab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3195083287159211264}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.59, y: -2.02, z: 0}
+  m_LocalPosition: {x: -8.59, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -209093375, guid: 06892cc227eb87b438a562043eede40f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2401715699492329321
+--- !u!114 &-8159447011442885296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,10 +94,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3195083287159211264}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecce4a7a0989eaa4d98459f04c50c18d, type: 3}
+  m_Script: {fileID: 11500000, guid: ca72285af9ab7f247a012f4b3d01957a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swimSpeed: 0.1
+  swimSpeed: 0.05
   swimDirection: {x: 0, y: 0}
-  inkDirection: {x: 0, y: 0}
+  inkSpawnDirection: {x: 0, y: 0}
   ink: {fileID: 8881384209258127809, guid: 4fe87e9872891c04fbbc7f3663c5af27, type: 3}
+  crabSprite:
+  - {fileID: 1623577406, guid: 06892cc227eb87b438a562043eede40f, type: 3}
+  - {fileID: -1219240174, guid: 06892cc227eb87b438a562043eede40f, type: 3}

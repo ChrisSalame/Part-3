@@ -222,7 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creaturePrefab:
   - {fileID: 8837329256977056577, guid: c14f991c356e853438c0959c09f45f1a, type: 3}
-  - {fileID: 3195083287159211264, guid: 29cbcf1dae7c498479c9d931e07719ed, type: 3}
+  - {fileID: 3195083287159211264, guid: b7c755a4d30189442a68f28c6328c998, type: 3}
   - {fileID: 1259312538628137591, guid: 35ce6a509110e5b4193e44f37bb714bd, type: 3}
 --- !u!1 &2123237974
 GameObject:
