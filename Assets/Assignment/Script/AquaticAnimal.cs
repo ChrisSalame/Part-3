@@ -8,7 +8,7 @@ public class AquaticAnimal : MonoBehaviour
 {
     //This sets the speed
     public float swimSpeed = 0.05f;
-    Vector2 swimDirection;
+    public Vector2 swimDirection;
 
     
     Rigidbody2D animalRb;
@@ -22,13 +22,6 @@ public class AquaticAnimal : MonoBehaviour
         animalRb = GetComponent<Rigidbody2D>();
 
     }
-
-    // Update is called once per frame
-    protected virtual void Update()
-    {
-
-    }
-
     private void FixedUpdate()
     {
         //This has the creature move in a set direction using speed

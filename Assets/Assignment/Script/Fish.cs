@@ -17,7 +17,8 @@ public class Fish : AquaticAnimal
     {
         yield return new WaitForSeconds(1);
         swimSpeed = 0.2f;
-        Vector2 swimDirection = new Vector2(Random.Range(0f, 3f), Random.Range(0f, 3f));
+        Vector2 swimDirection = new Vector2(Random.Range(0f, 2f), Random.Range(0f, 5f));
+        Debug.Log(swimDirection);
     }
 
 
