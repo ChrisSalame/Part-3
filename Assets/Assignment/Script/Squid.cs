@@ -8,11 +8,13 @@ public class Squid : AquaticAnimal
     Coroutine pauseBeforeSquidInk;
     public Vector2 inkDirection;
     public float inkSpawn = 0;
+    public float inkFallSpeed = 0.5f;
 
     void inkSpeed() 
     {
         inkDirection.y = -1;
-        inkDirection.x = 0; 
+        inkDirection.x = 0;
+        transform.Translate(inkDirection.normalized * inkFallSpeed);
     }
 
     protected override void action()
@@ -29,7 +31,6 @@ public class Squid : AquaticAnimal
             yield return new WaitForSeconds(0.5f);
             Instantiate(ink);
             Debug.Log(inkSpawn);
-            transform.Translate(inkDirection.normalized * swimSpeed);
         }
        inkSpawn = 0;
         Debug.Log("Squid shot out ink");
