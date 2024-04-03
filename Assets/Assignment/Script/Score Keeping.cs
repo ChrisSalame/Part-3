@@ -18,11 +18,20 @@ public class ScoreKeeping : MonoBehaviour
     void Update()
     {
         AddScore();
+        ClearScore();
     }
 
     public  void AddScore()
     {
        scoreKeep.text = "Score: " + score;
 
+    }
+
+    public static void ClearScore()
+    {
+        if (Input.GetMouseButtonDown(1)) 
+        {
+            ScoreKeeping.score = 0;
+        }
     }
 }
