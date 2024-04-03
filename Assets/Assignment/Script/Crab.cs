@@ -8,15 +8,17 @@ public class Crab : AquaticAnimal
     public Sprite[] crabSprite = new Sprite [2];
     protected override void action()
     {
+        swimSpeed = 0;
         pauseBeforeShell = StartCoroutine(actionCoroutine());
-
+        
     }
 
     IEnumerator actionCoroutine()
     {
-        yield return new WaitForSeconds(2);
-        GetComponent<SpriteRenderer>().sprite = crabSprite[1];
-        Debug.Log("Crab Tucked into Shell");
+        yield return new WaitForSeconds(3);
+        swimSpeed = 0.1f;
+        GetComponent<SpriteRenderer>().sprite = crabSprite[0];
+        Debug.Log("Crab go out of shell");
     }
 
 
