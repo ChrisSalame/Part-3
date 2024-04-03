@@ -6,16 +6,28 @@ public class AquaticSpawner : MonoBehaviour
 {
     //This is creating a list
     public GameObject[] creaturePrefab = new GameObject[3];
-    
-    
+
+  
+   
+    float timePassed = 0;
+    float randomTimer = 0; 
+
     void Update()
     {
-        // This makes it so that when the down key is pressed, the player spawns one of the random prefabs
-        if (Input.GetKeyDown("space")) 
+        randomTimer = Random.Range(2, 5);
+        timePassed += Time.deltaTime;
+        if (timePassed >= randomTimer)
         {
-            Debug.Log("space works and spawner spawns");
-            Instantiate(creaturePrefab[Random.Range(0,3)]);
+            SpawnCreature();
+            timePassed = 0;
         }
-        
     }
+
+    public void SpawnCreature()
+    {
+        Instantiate(creaturePrefab[Random.Range(0, 3)]);
+    }
+
+
+
 }
