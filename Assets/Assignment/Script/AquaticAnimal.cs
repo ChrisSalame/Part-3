@@ -23,6 +23,7 @@ public class AquaticAnimal : MonoBehaviour
 
         animalRb = GetComponent<Rigidbody2D>();
     }
+
     private void FixedUpdate()
     {
         //This has the creature move in a set direction using speed
@@ -37,7 +38,7 @@ public class AquaticAnimal : MonoBehaviour
     //This function is to have the animal perform an action when pressed on 
     protected virtual void action() 
     {
-
+        
     }
 
 

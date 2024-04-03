@@ -31,5 +31,6 @@ public class Squid : AquaticAnimal
     private void OnMouseDown()
     {
         action();
+        ScoreKeeping.score = ScoreKeeping.score + 3;
     }
 }

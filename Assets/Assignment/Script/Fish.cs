@@ -25,5 +25,6 @@ public class Fish : AquaticAnimal
     private void OnMouseDown()
     {
         action();
+        ScoreKeeping.score = ScoreKeeping.score + 2;
     }
 }

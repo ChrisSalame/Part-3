@@ -8,6 +8,7 @@ public class Crab : AquaticAnimal
     public Sprite[] crabSprite = new Sprite [2];
     protected override void action()
     {
+
         swimSpeed = 0;
         pauseBeforeShell = StartCoroutine(actionCoroutine());
         
@@ -26,7 +27,7 @@ public class Crab : AquaticAnimal
     {
         GetComponent<SpriteRenderer>().sprite = crabSprite[1];
         action();
-
+        ScoreKeeping.score = ScoreKeeping.score + 1;
 
     }
 
